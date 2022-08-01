@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-U5-Fx3">
-                                <rect key="frame" x="184" y="642" width="46" height="30"/>
+                                <rect key="frame" x="184" y="641" width="46" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="xmR-ie-qBH">
-                                <rect key="frame" x="132" y="55" width="150" height="503"/>
+                                <rect key="frame" x="132" y="54" width="150" height="503"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-RC-u7m">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
@@ -51,9 +51,10 @@
                         <constraints>
                             <constraint firstItem="fUU-U5-Fx3" firstAttribute="top" secondItem="ONM-t5-7Sp" secondAttribute="bottom" constant="84" id="8eg-gJ-puW"/>
                             <constraint firstItem="xmR-ie-qBH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EEe-PR-l3c"/>
-                            <constraint firstItem="xmR-ie-qBH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="Rdb-Ra-tI3"/>
+                            <constraint firstItem="xmR-ie-qBH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="FpL-Qx-nyR"/>
                             <constraint firstItem="fUU-U5-Fx3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="koO-n4-g29"/>
                             <constraint firstItem="xmR-ie-qBH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.561384" id="rn5-fF-SXc"/>
+                            <constraint firstItem="xmR-ie-qBH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="rtc-7B-aSZ"/>
                         </constraints>
                     </view>
                 </viewController>
