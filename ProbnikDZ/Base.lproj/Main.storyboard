@@ -37,21 +37,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kZ3-RC-u7m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2pG-qL-1jU"/>
                             <constraint firstItem="fUU-U5-Fx3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6eY-AJ-ss0"/>
                             <constraint firstItem="clP-Q8-IUs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.168527" id="Bzg-cy-6KD"/>
                             <constraint firstItem="clP-Q8-IUs" firstAttribute="top" secondItem="kZ3-RC-u7m" secondAttribute="bottom" constant="25" id="Dtv-4a-ZOo"/>
                             <constraint firstItem="fUU-U5-Fx3" firstAttribute="top" secondItem="ONM-t5-7Sp" secondAttribute="bottom" constant="85" id="OX4-VL-DY2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="clP-Q8-IUs" secondAttribute="trailing" constant="132" id="S88-hS-oAg"/>
                             <constraint firstItem="ONM-t5-7Sp" firstAttribute="top" secondItem="clP-Q8-IUs" secondAttribute="bottom" constant="25" id="Tbf-2a-bwU"/>
-                            <constraint firstItem="ONM-t5-7Sp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="Ubb-Zt-v7N"/>
                             <constraint firstItem="clP-Q8-IUs" firstAttribute="width" secondItem="ONM-t5-7Sp" secondAttribute="width" id="W6O-Kq-vgD"/>
                             <constraint firstItem="kZ3-RC-u7m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="bn7-Wr-Vaw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ONM-t5-7Sp" secondAttribute="trailing" constant="132" id="c6Z-H0-SIj"/>
-                            <constraint firstItem="clP-Q8-IUs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="fbp-hh-wXV"/>
+                            <constraint firstItem="clP-Q8-IUs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hwr-V2-xna"/>
                             <constraint firstItem="ONM-t5-7Sp" firstAttribute="height" secondItem="clP-Q8-IUs" secondAttribute="height" id="l5Z-AH-KRp"/>
                             <constraint firstItem="clP-Q8-IUs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="75:448" id="pbc-yE-Bbe"/>
-                            <constraint firstItem="kZ3-RC-u7m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="qCy-dV-cKw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kZ3-RC-u7m" secondAttribute="trailing" constant="132" id="qrb-tC-nry"/>
+                            <constraint firstItem="ONM-t5-7Sp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ti0-bG-Izr"/>
                             <constraint firstItem="kZ3-RC-u7m" firstAttribute="width" secondItem="clP-Q8-IUs" secondAttribute="width" id="tkf-A6-wiW"/>
                             <constraint firstItem="clP-Q8-IUs" firstAttribute="height" secondItem="kZ3-RC-u7m" secondAttribute="height" id="u9D-Jb-9WZ"/>
                         </constraints>
