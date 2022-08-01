@@ -16,41 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-RC-u7m">
-                                <rect key="frame" x="132" y="54" width="150" height="151"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clP-Q8-IUs">
-                                <rect key="frame" x="132" y="230" width="150" height="151"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONM-t5-7Sp">
-                                <rect key="frame" x="132" y="406" width="150" height="151"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-U5-Fx3">
                                 <rect key="frame" x="184" y="642" width="46" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="xmR-ie-qBH">
+                                <rect key="frame" x="132" y="55" width="150" height="503"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-RC-u7m">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clP-Q8-IUs">
+                                        <rect key="frame" x="0.0" y="176" width="150" height="151"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONM-t5-7Sp">
+                                        <rect key="frame" x="0.0" y="352" width="150" height="151"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="clP-Q8-IUs" firstAttribute="height" secondItem="ONM-t5-7Sp" secondAttribute="height" id="Lo8-IG-tS1"/>
+                                    <constraint firstItem="ONM-t5-7Sp" firstAttribute="centerX" secondItem="xmR-ie-qBH" secondAttribute="centerX" id="RtY-jI-QPl"/>
+                                    <constraint firstItem="kZ3-RC-u7m" firstAttribute="height" secondItem="clP-Q8-IUs" secondAttribute="height" id="SCg-Ps-uIc"/>
+                                    <constraint firstItem="kZ3-RC-u7m" firstAttribute="centerX" secondItem="xmR-ie-qBH" secondAttribute="centerX" id="byB-7D-KQy"/>
+                                    <constraint firstItem="clP-Q8-IUs" firstAttribute="centerX" secondItem="xmR-ie-qBH" secondAttribute="centerX" id="v9i-nr-Acp"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kZ3-RC-u7m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2pG-qL-1jU"/>
-                            <constraint firstItem="fUU-U5-Fx3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6eY-AJ-ss0"/>
-                            <constraint firstItem="clP-Q8-IUs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.168527" id="Bzg-cy-6KD"/>
-                            <constraint firstItem="clP-Q8-IUs" firstAttribute="top" secondItem="kZ3-RC-u7m" secondAttribute="bottom" constant="25" id="Dtv-4a-ZOo"/>
-                            <constraint firstItem="fUU-U5-Fx3" firstAttribute="top" secondItem="ONM-t5-7Sp" secondAttribute="bottom" constant="85" id="OX4-VL-DY2"/>
-                            <constraint firstItem="ONM-t5-7Sp" firstAttribute="top" secondItem="clP-Q8-IUs" secondAttribute="bottom" constant="25" id="Tbf-2a-bwU"/>
-                            <constraint firstItem="clP-Q8-IUs" firstAttribute="width" secondItem="ONM-t5-7Sp" secondAttribute="width" id="W6O-Kq-vgD"/>
-                            <constraint firstItem="kZ3-RC-u7m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="bn7-Wr-Vaw"/>
-                            <constraint firstItem="clP-Q8-IUs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hwr-V2-xna"/>
-                            <constraint firstItem="ONM-t5-7Sp" firstAttribute="height" secondItem="clP-Q8-IUs" secondAttribute="height" id="l5Z-AH-KRp"/>
-                            <constraint firstItem="clP-Q8-IUs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="75:448" id="pbc-yE-Bbe"/>
-                            <constraint firstItem="ONM-t5-7Sp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ti0-bG-Izr"/>
-                            <constraint firstItem="kZ3-RC-u7m" firstAttribute="width" secondItem="clP-Q8-IUs" secondAttribute="width" id="tkf-A6-wiW"/>
-                            <constraint firstItem="clP-Q8-IUs" firstAttribute="height" secondItem="kZ3-RC-u7m" secondAttribute="height" id="u9D-Jb-9WZ"/>
+                            <constraint firstItem="fUU-U5-Fx3" firstAttribute="top" secondItem="ONM-t5-7Sp" secondAttribute="bottom" constant="84" id="8eg-gJ-puW"/>
+                            <constraint firstItem="xmR-ie-qBH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EEe-PR-l3c"/>
+                            <constraint firstItem="xmR-ie-qBH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="Rdb-Ra-tI3"/>
+                            <constraint firstItem="fUU-U5-Fx3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="koO-n4-g29"/>
+                            <constraint firstItem="xmR-ie-qBH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.561384" id="rn5-fF-SXc"/>
                         </constraints>
                     </view>
                 </viewController>
