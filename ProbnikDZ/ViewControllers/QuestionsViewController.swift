@@ -41,10 +41,17 @@ final class QuestionsViewController: UIViewController {
         questions[currentQuestionIndex].answers
     }
     
+    // MARK: Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let result = segue.destination as? ResultViewController else { return }
+        result.answerChosen = answerChosen
+        
     }
 
     //MARK: IBActions
@@ -53,7 +60,6 @@ final class QuestionsViewController: UIViewController {
         
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
-        
         nextQuestion()
     }
     
