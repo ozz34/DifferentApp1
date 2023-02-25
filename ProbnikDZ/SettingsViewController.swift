@@ -25,16 +25,4 @@ class SettingsViewController: UIViewController {
     @IBAction func cancelButtonPressed() {
         dismiss(animated: true)
     }
-    
-    
-
-    /*
-     
-     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
-        
-    }
-    */
-
 }
