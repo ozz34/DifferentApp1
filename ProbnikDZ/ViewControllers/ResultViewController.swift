@@ -18,7 +18,6 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
-      
         getResultAnimal()
     }
 
@@ -26,5 +25,3 @@ class ResultViewController: UIViewController {
        dismiss(animated: true)
     }
 }
-
-    
