@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    // MARK: - Properties
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var label: UILabel!
     @IBOutlet var slider: UISlider!
@@ -16,18 +16,17 @@ class ViewController: UIViewController {
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var switchLabel: UILabel!
     
+    // MARK: - Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupSlider()
         setupMAinLabel()
         setupTextField()
         
         segmentedControl.insertSegment(withTitle: "Third", at: 2, animated: false)
     }
-
+    // MARK: - Helpers
     @IBAction func segmentedControlAction() {
-       
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             label.text = "The first segment is selected"
@@ -60,23 +59,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func datePickerAction() {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
-        
-        
         label.text = dateFormatter.string(from: datePicker.date)
     }
     
-    
     @IBAction func switchAction(_ sender: UISwitch) {
-        
         datePicker.isHidden = !sender.isOn
         switchLabel.text = sender.isOn ? "Hide Date Picker" : "Show Date Picker"
     }
     
-    
-    //MARK: Private methods
     private func setupMAinLabel() {
         label.text = String(slider.value)
         label.font = UIFont.systemFont(ofSize: 25)
@@ -85,7 +77,6 @@ class ViewController: UIViewController {
     }
     
     private func setupSlider() {
-        
         slider.minimumValue = 0
         slider.maximumValue = 10
         slider.value = 3
@@ -99,19 +90,14 @@ class ViewController: UIViewController {
     }
 }
 
-//MARK: UIAlertController
+// MARK: - UIAlertController
 extension ViewController {
-    
-    private func showAlert(with title:String, message: String) {
-    
+    private func showAlert(with title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.textField.text = ""
         }
-        
         alert.addAction(okAction)
-        
         present(alert, animated: true)
     }
 }
