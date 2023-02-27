@@ -8,8 +8,7 @@
 import UIKit
 
 final class QuestionsViewController: UIViewController {
-
-    //MARK: IBOutlets
+    // MARK: - Properties
     @IBOutlet var questionLabel: UILabel!
     
     @IBOutlet var singleStackView: UIStackView!
@@ -24,15 +23,13 @@ final class QuestionsViewController: UIViewController {
     @IBOutlet var rangedSlider: UISlider! {
         didSet {
             let answerCount = Float(currentAnswers.count - 1)
-            
             rangedSlider.maximumValue = answerCount
             rangedSlider.value = answerCount / 2
         }
     }
-    
     @IBOutlet var questionsProgressView: UIProgressView!
     
-    //MARK: Private properties
+    // MARK: - Private properties
     private let questions = Question.getQuestions()
     private var answerChosen: [Answer] = []
     private var currentQuestionIndex = 0 // index current questions
@@ -41,7 +38,7 @@ final class QuestionsViewController: UIViewController {
         questions[currentQuestionIndex].answers
     }
     
-    // MARK: Override functions
+    // MARK: - Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,7 +51,7 @@ final class QuestionsViewController: UIViewController {
         
     }
 
-    //MARK: IBActions
+    // MARK: - IBActions
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         guard let currentIndex = singleButtons.firstIndex(of: sender) else { return }
         
@@ -73,34 +70,30 @@ final class QuestionsViewController: UIViewController {
     }
     
     @IBAction func rengedAnswerButtonPressed() {
-        
         let index = lrint(Double(rangedSlider.value))
         answerChosen.append(currentAnswers[index])
         
         nextQuestion()
     }
-    
 }
 
-    //MARK: User Interface
+// MARK: - User Interface
 extension QuestionsViewController {
     private func updateUI() {
         // hide stack
         for stackView in [singleStackView, multipleStackView, rengedStackView] {
             stackView?.isHidden = true
         }
-        
-        //set current question
+        // set current question
         let currentQuestion = questions[currentQuestionIndex]
-        //set current qustion for label
+        // set current qustion for label
         questionLabel.text = currentQuestion.title
         // set progress
         let totalProgress = Float(currentQuestionIndex)/Float(questions.count)
         questionsProgressView.setProgress(totalProgress, animated: true)
-        
-        //set navigation title
+        // set navigation title
         title = "Вопрос № \(currentQuestionIndex + 1) из \(questions.count)"
-        
+    
         showCurrentAnswers(for: currentQuestion.type)
     }
     
@@ -117,7 +110,6 @@ extension QuestionsViewController {
     
     private func showSingleStackView(with answers: [Answer]) {
         singleStackView.isHidden = false
-        
         for (button, answer) in zip(singleButtons, answers) {
             button.setTitle(answer.title, for: .normal)
         }
@@ -133,7 +125,6 @@ extension QuestionsViewController {
     
     private func showRangedStackView(with answers: [Answer]) {
         rengedStackView.isHidden = false
-        
         rangedLabels.first?.text = answers.first?.title
         rangedLabels.last?.text = answers.last?.title
 }
@@ -149,4 +140,3 @@ extension QuestionsViewController {
         }
     }
 }
-

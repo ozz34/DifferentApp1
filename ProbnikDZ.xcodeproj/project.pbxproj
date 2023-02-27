@@ -69,13 +69,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		876B220828AAC557004880AE /* SupportFiles */ = {
+		876B220828AAC557004880AE /* App */ = {
 			isa = PBXGroup;
 			children = (
 				87B4B4D52897D499002002D7 /* AppDelegate.swift */,
 				87B4B4D72897D499002002D7 /* SceneDelegate.swift */,
+				87B4B4E32897D49A002002D7 /* Info.plist */,
 			);
-			path = SupportFiles;
+			path = App;
 			sourceTree = "<group>";
 		};
 		87B3B8F428AFF622009A897B /* Extension */ = {
@@ -105,13 +106,12 @@
 		87B4B4D42897D499002002D7 /* ProbnikDZ */ = {
 			isa = PBXGroup;
 			children = (
-				87B3B8F428AFF622009A897B /* Extension */,
-				876B220528AAC515004880AE /* ViewControllers */,
 				876B220628AAC52C004880AE /* Models */,
+				876B220528AAC515004880AE /* ViewControllers */,
 				876B220728AAC53F004880AE /* Storyboards */,
-				876B220828AAC557004880AE /* SupportFiles */,
+				876B220828AAC557004880AE /* App */,
+				87B3B8F428AFF622009A897B /* Extension */,
 				87B4B4DE2897D49A002002D7 /* Assets.xcassets */,
-				87B4B4E32897D49A002002D7 /* Info.plist */,
 			);
 			path = ProbnikDZ;
 			sourceTree = "<group>";
@@ -126,6 +126,7 @@
 				87B4B4CE2897D499002002D7 /* Sources */,
 				87B4B4CF2897D499002002D7 /* Frameworks */,
 				87B4B4D02897D499002002D7 /* Resources */,
+				870581AB29ACF8BA00B34033 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -181,6 +182,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		870581AB29ACF8BA00B34033 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87B4B4CE2897D499002002D7 /* Sources */ = {
@@ -341,7 +362,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S5QF774VV5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ProbnikDZ/Info.plist;
+				INFOPLIST_FILE = ProbnikDZ/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -368,7 +389,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S5QF774VV5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ProbnikDZ/Info.plist;
+				INFOPLIST_FILE = ProbnikDZ/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

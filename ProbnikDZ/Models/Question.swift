@@ -22,11 +22,9 @@ enum ResponseType {
 struct Answer {
     let title: String
     let type: AnimalType
-    
 }
 
 enum AnimalType: Character {
-    
     case dog = "🐶"
     case cat = "🐱"
     case rabbit = "🐰"
@@ -47,7 +45,6 @@ enum AnimalType: Character {
 }
 
 extension Question {
-    
     static func getQuestions() -> [Question] {
           [
             Question(
@@ -79,8 +76,7 @@ extension Question {
                     Answer(title: "Не замечаю", type: .turtle),
                     Answer(title: "Обожаю", type: .dog)
                 ]
-            ),
+            )
         ]
     }
 }
-
