@@ -8,19 +8,18 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    // MARK: - Properties
     @IBOutlet var minimumValueTF: UITextField!
     @IBOutlet var maximumValueTF: UITextField!
     
     var minimumValue: String!
     var maximumValue: String!
-   
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         minimumValueTF.text = minimumValue
         maximumValueTF.text = maximumValue
-        
     }
     @IBAction func cancelButtonPressed() {
         dismiss(animated: true)
